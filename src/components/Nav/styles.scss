@@ -123,6 +123,7 @@ $universe-nav-gradient: linear-gradient(98deg, $universe-yellow 18.56%, $univers
     width: rem(26);
     height: rem(38);
     cursor: pointer;
+    flex-shrink: 0;
 
     & > span {
       &,
@@ -132,6 +133,7 @@ $universe-nav-gradient: linear-gradient(98deg, $universe-yellow 18.56%, $univers
         position: absolute;
         width: 100%;
         height: rem(2);
+        flex-shrink: 0;
         background-color: $universe-white;
         transition-duration: $universe-timing-duration-quick;
       }
