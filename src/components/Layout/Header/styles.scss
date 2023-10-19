@@ -1,0 +1,23 @@
+@use '../../../assets/styles/settings' as *;
+
+.header {
+  background-color: $universe-black;
+
+  @media screen and (max-width: map-get($universe-breakpoints, 'md') - 0.02px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+
+  > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: map-get($universe-breakpoints, 'md') - 0.02px) {
+      height: rem(48);
+    }
+  }
+}

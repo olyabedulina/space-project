@@ -1,0 +1,15 @@
+@use '../../../assets/styles/settings' as *;
+
+.container {
+  @media screen and (min-width: map-get($universe-breakpoints, 'lg')) {
+    width: 87%;
+    max-width: 1460px;
+  }
+
+  @media screen and (min-width: map-get($universe-breakpoints, 'md')) {
+    width: 92%; // measured
+  }
+
+  width: 94%;
+  margin: 0 auto;
+}

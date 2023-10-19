@@ -1,0 +1,15 @@
+@use '../../assets/styles/settings' as *;
+
+.logo {
+  display: block;
+  width: 104px;
+  height: 35px;
+  background-image: url(../../assets/images/logo.svg);
+  background-size: cover;
+  background-position: 50% 50%;
+
+  @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+    width: 71px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,13 @@
+$universe-bgs: (
+  '1': '../../assets/images/stars-1.jpg',
+  '2': '../../assets/images/stars-2.jpg',
+  '3': '../../assets/images/stars-3.jpg',
+  '4': '../../assets/images/stars-4.jpg',
+  '5': '../../assets/images/stars-5.jpg',
+);
+
+@each $number, $url in $universe-bgs {
+  .card-bg-#{$number} {
+    background-image: url($url);
+  }
+}

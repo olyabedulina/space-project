@@ -1,0 +1,44 @@
+@use 'variables' as *;
+@import 'functions/rem';
+
+h1 {
+  font-size: rem(72);
+  font-weight: $universe-font-weight-extra-bold;
+  line-height: 100%;
+  color: $universe-white;
+
+  @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+    font-size: rem(48);
+  }
+
+  @media screen and (max-width: map-get($universe-breakpoints, 'md') - 0.02px) {
+    font-size: rem(36);
+  }
+}
+
+h2 {
+  color: $universe-white;
+  font-size: rem(32);
+  font-style: normal;
+  font-weight: $universe-font-weight-extra-bold;
+  line-height: 100%;
+
+  @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+    font-size: rem(24);
+  }
+
+  @media screen and (max-width: map-get($universe-breakpoints, 'md') - 0.02px) {
+    font-size: rem(18);
+  }
+}
+
+ h3 {
+   font-size: rem(46);
+   font-weight: $universe-font-weight-extra-bold;
+   line-height: 100%;
+   color: $universe-white;
+
+   @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+     font-size: rem(40);
+   }
+ }

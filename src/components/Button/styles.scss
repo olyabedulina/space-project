@@ -1,0 +1,39 @@
+@use '../../assets/styles/settings' as *;
+
+.btn {
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1.5;
+  color: $universe-black;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: rem(7) rem(40);
+  font-size: 1rem;
+  border-radius: $universe-border-radius-lg;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+  &--primary {
+    background-color: $universe-yellow;
+    color: $universe-black;
+
+    &:hover {
+      background-color: rgba($universe-yellow, 0.6);
+    }
+  }
+
+  &--outline-primary {
+    background-color: transparent;
+    border-color: $universe-yellow;
+    color: $universe-yellow;
+
+    &:hover {
+      border-color: rgba($universe-yellow, 0.6);
+      color: rgba($universe-yellow, 0.6);
+    }
+  }
+}

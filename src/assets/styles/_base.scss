@@ -1,0 +1,12 @@
+@use 'variables' as *;
+
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: $universe-font-weight-bold;
+  color: $universe-white;
+}
+
+.lock-scroll {
+  overflow: hidden;
+}

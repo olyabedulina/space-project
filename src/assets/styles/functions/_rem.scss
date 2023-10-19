@@ -1,0 +1,10 @@
+// https://dev.to/nikolab/convert-px-to-rem-using-sass-3-methods-4ep2
+// Unlike mixin, which "generates" CSS, the function only calculates the value.
+// Function can be used with any property.
+// -- no need to create a new mixin for every property
+// -- no need to call only one set of arguments per @incude
+
+@function rem($val) {
+  $remVal: ($val / 16) + rem;
+  @return $remVal;
+}

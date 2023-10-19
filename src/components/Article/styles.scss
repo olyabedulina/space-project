@@ -1,0 +1,96 @@
+@use '../../assets/styles/settings' as *;
+
+.article {
+  --lh: 1.5rem;
+  --max-lines: 6;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  align-items: flex-start;
+
+  @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+    --lh: 1.2rem;
+  }
+
+  @media screen and (max-width: map-get($universe-breakpoints, 'md') - 0.02px) {
+    --lh: 1.05rem;
+  }
+
+  &__heading {
+    font-size: rem(32);
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  &__copy {
+    font-size: rem(20);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    opacity: 0.6;
+
+    @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+      font-size: rem(16);
+    }
+
+    @media screen and (max-width: map-get($universe-breakpoints, 'md') - 0.02px) {
+      font-size: rem(14);
+    }
+
+    > p {
+      display: inline-block;
+
+      &:not(:last-child) {
+        padding-bottom: var(--lh);
+      }
+    }
+  }
+
+  input {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  div {
+    position: relative;
+    max-height: calc(var(--lh) * var(--max-lines));
+    overflow: hidden;
+  }
+
+  input:focus ~ label {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+
+  input:checked + div {
+    --max-lines: 10000;
+  }
+
+  input:checked ~ label,
+  div:not(.article__copy--truncated) ~ label {
+    display: none;
+  }
+
+  &__btn-read-more {
+    cursor: pointer;
+    color: $universe-yellow;
+    font-family: 'Lato', sans-serif;
+    font-size: rem(20);
+    font-style: normal;
+    font-weight: $universe-font-weight-extra-bold;
+    line-height: normal;
+
+    &:hover {
+      color: rgba($universe-yellow, 0.6);
+    }
+
+    @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+      font-size: rem(16);
+    }
+
+    @media screen and (max-width: map-get($universe-breakpoints, 'md') - 0.02px) {
+      font-size: rem(14);
+    }
+  }
+}

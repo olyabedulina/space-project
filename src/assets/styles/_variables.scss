@@ -1,0 +1,28 @@
+@use 'functions/rem' as *;
+
+$universe-white: #ffffff;
+$universe-gray: #f8f8f8;
+$universe-black: #000000;
+$universe-blue-dark: #0d1e48;
+$universe-blue: #304571;
+$universe-pink: #ff70d9;
+$universe-yellow: #ebff00;
+
+$universe-vertical: rem(22);
+$universe-cards-vertical: rem(40);
+
+$universe-timing-curve-ease: ease;
+$universe-timing-duration-slow: 500ms;
+$universe-timing-duration-quick: 300ms;
+
+$universe-border-radius-lg: rem(100);
+
+$universe-font-weight-bold: 700;
+$universe-font-weight-extra-bold: 900;
+
+$universe-breakpoints: (
+  xs: 0,
+  sm: 360px,
+  md: 768px,
+  lg: 1248px,
+);

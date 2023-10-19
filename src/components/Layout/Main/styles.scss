@@ -1,0 +1,74 @@
+@use '../../../assets/styles/settings' as *;
+@import '../../../assets/styles/backgrounds';
+
+.main {
+  padding: rem(58) 0;
+  background: linear-gradient(196deg, $universe-blue-dark 0%, $universe-blue 100%);
+
+  &__content {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    @media screen and (min-width: map-get($universe-breakpoints, 'lg')) {
+      grid-template-areas: "header header" "left-column right-column" "footer footer";
+      grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content);
+      grid-gap: $universe-cards-vertical;
+      align-content: center;
+    }
+
+    @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+      grid-template-rows: auto;
+      gap: 30px;
+    }
+
+    @media screen and (max-width: map-get($universe-breakpoints, 'md') - 0.02px) {
+      grid-template-columns: 100%;
+      grid-template-rows: auto;
+      gap: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(62);
+    }
+  }
+
+  @media screen and (min-width: map-get($universe-breakpoints, 'lg')) {
+    .card:first-of-type {
+      grid-area: header;
+    }
+
+    .card:not(:first-of-type):not(:last-of-type) {
+      &:nth-child(2n + 1) {
+        grid-area: right-column;
+      }
+
+      &:nth-child(2n) {
+        grid-area: left-column;
+      }
+    }
+
+    .card:last-of-type {
+      grid-area: footer;
+    }
+  }
+
+  .card:first-of-type,
+  .card:last-of-type {
+    > .card__heading {
+      width: 48%;
+      font-size: rem(74);
+
+      @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+        font-size: rem(40);
+        width: 80%;
+      }
+    }
+  }
+
+  h2.heading {
+    padding-bottom: rem(40);
+  }
+}

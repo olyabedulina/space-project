@@ -1,0 +1,38 @@
+@use '../../../assets/styles/settings' as *;
+
+.footer {
+  padding-bottom: rem(19);
+  background-color: $universe-black;
+
+  > .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__copy {
+    position: relative;
+    padding-top: 90px;
+    color: $universe-yellow;
+    text-align: center;
+    font-size: rem(18);
+    font-style: normal;
+    font-weight: $universe-font-weight-extra-bold;
+    line-height: rem(28);
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      content: '';
+      display: block;
+      width: rem(95);
+      height: rem(86);
+      background-image: url(../../../assets/images/rocket.svg);
+      background-size: cover;
+      background-position: 50% 50%;
+    }
+  }
+}

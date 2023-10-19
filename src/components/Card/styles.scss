@@ -1,0 +1,72 @@
+@use '../../assets/styles/settings' as *;
+
+.card {
+  $this: &;
+
+  display: flex;
+  flex-direction: column;
+  gap: $universe-vertical;
+  align-items: flex-start;
+  padding: rem(36);
+  min-height: 250px;
+  font-family: 'Lato', sans-serif;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  &__heading {
+    #{$this} & {
+      width: 46%;
+
+      em {
+        color: $universe-pink;
+      }
+
+      @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+        width: 80%;
+      }
+    }
+  }
+
+  &__copy {
+    color: $universe-white;
+    font-size: rem(24);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%;
+
+    em {
+      color: $universe-yellow;
+    }
+  }
+
+  &--hero {
+    padding-left: 0;
+
+    #{$this}__heading {
+      width: 70%;
+    }
+
+    @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+      flex: 1 1 60%;
+      flex-shrink: 0;
+
+      #{$this}__heading {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: map-get($universe-breakpoints, 'md') - 0.02px) {
+      justify-content: flex-end;
+      align-items: center;
+      margin: 0;
+      height: 100%;
+      text-align: center;
+      padding: 0;
+
+      .btn {
+        margin-bottom: 44px;
+      }
+    }
+  }
+}
