@@ -3,7 +3,8 @@
 
 .main {
   padding: rem(58) 0 rem(60);
-  background: linear-gradient(196deg, $universe-blue-dark 0%, $universe-blue 100%);
+  background-color: $universe-blue;
+  background-image: linear-gradient(196deg, $universe-blue-dark 0%, $universe-blue 100%);
 
   @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
     padding-top: rem(55);
@@ -24,13 +25,13 @@
 
     @media screen and (min-width: map-get($universe-breakpoints, 'lg')) {
       grid-template-areas: "header header" "left-column right-column" "footer footer";
-      grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
       grid-gap: $universe-cards-vertical;
       align-content: center;
     }
 
     @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
-      grid-template-rows: auto;
       gap: 30px;
     }
 

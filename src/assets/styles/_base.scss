@@ -2,8 +2,10 @@
 
 html,
 body {
+  min-width: rem(360);
   font-family: 'Lato', sans-serif;
   font-weight: $universe-font-weight-bold;
+  background-color: $universe-black;
   color: $universe-white;
 }
 
