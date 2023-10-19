@@ -1,3 +1,8 @@
+# Hi, I'm Olya, author of this project.
+
+I have spent ~ten hours in a sum working under this project. Enjoy.
+node version: v18.12.1, npm version: 8.19.2.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
