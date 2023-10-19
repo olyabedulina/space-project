@@ -2,20 +2,24 @@
 
 .btn {
   display: inline-block;
-  font-weight: 700;
-  line-height: 1.5;
-  color: $universe-black;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
+  border-radius: $universe-border-radius-lg;
+  border: none;
+  padding: rem(14) rem(40);
   cursor: pointer;
   user-select: none;
   background-color: transparent;
-  border: 1px solid transparent;
-  padding: rem(7) rem(40);
+  font-family: 'Lato', sans-serif;
   font-size: 1rem;
-  border-radius: $universe-border-radius-lg;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  font-weight: $universe-font-weight-bold;
+  line-height: normal;
+  vertical-align: middle;
+  color: $universe-black;
+  text-align: center;
+  text-decoration: none;
+  transition: color $universe-timing-duration-extra-quick $universe-timing-curve-ease-in-out,
+  background-color $universe-timing-duration-extra-quick $universe-timing-curve-ease-in-out,
+  border-color $universe-timing-duration-extra-quick $universe-timing-curve-ease-in-out,
+  box-shadow $universe-timing-duration-extra-quick $universe-timing-curve-ease-in-out;
 
   &--primary {
     background-color: $universe-yellow;
@@ -27,13 +31,33 @@
   }
 
   &--outline-primary {
+    border: 2px solid $universe-yellow;
     background-color: transparent;
-    border-color: $universe-yellow;
     color: $universe-yellow;
 
     &:hover {
       border-color: rgba($universe-yellow, 0.6);
       color: rgba($universe-yellow, 0.6);
+    }
+  }
+
+  &--lg {
+    font-size: rem(22);
+
+    @media screen and (max-width: map-get($universe-breakpoints, 'md') - 0.02px) {
+      padding-top: rem(7);
+      padding-bottom: rem(7);
+      font-size: rem(16);
+    }
+  }
+
+  &--md {
+    font-size: rem(22);
+
+    @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+      padding-top: rem(7);
+      padding-bottom: rem(7);
+      font-size: rem(16);
     }
   }
 }

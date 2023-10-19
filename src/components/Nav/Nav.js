@@ -38,7 +38,7 @@ const Nav = ({ links, className = '' }) => {
           <input
             ref={checkboxRef}
             onChange={handleChange}
-            className="hamburger-menu__input"
+            className="hamburger-menu__input visually-hidden"
             id={`hamburger-menu__toggle-${uid}`}
             type="checkbox"
           />

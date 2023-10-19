@@ -38,18 +38,46 @@
     em {
       color: $universe-yellow;
     }
+
+    @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+      flex: 1;
+      font-size: rem(16);
+    }
+
+  }
+
+  @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+    padding-top: rem(106);
   }
 
   &--hero {
     padding-left: 0;
 
+    @media screen and (max-width: map-get($universe-breakpoints, 'md') - 0.02px) {
+      gap: rem(17);
+    }
+
     #{$this}__heading {
       width: 70%;
+    }
+
+    #{$this}__copy {
+      font-size: rem(32);
+
+      @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+        flex: unset;
+        font-size: rem(22);
+      }
+
+      @media screen and (max-width: map-get($universe-breakpoints, 'md') - 0.02px) {
+        font-size: rem(16);
+      }
     }
 
     @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
       flex: 1 1 60%;
       flex-shrink: 0;
+      padding-top: rem(36);
 
       #{$this}__heading {
         width: 100%;
@@ -65,7 +93,7 @@
       padding: 0;
 
       .btn {
-        margin-bottom: 44px;
+        margin-bottom: rem(44);
       }
     }
   }

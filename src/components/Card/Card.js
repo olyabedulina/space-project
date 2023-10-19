@@ -10,6 +10,7 @@ const Card = ({
   buttonVariant = 'primary',
   handleButtonClick,
   buttonText,
+  buttonSize = 'md',
   paragraphText,
   props,
 }) => {
@@ -20,7 +21,7 @@ const Card = ({
       <Tag as={headingTag} className="card__heading" dangerouslySetInnerHTML={{ __html: headingText }} />
       {paragraphText && <p className="card__copy" dangerouslySetInnerHTML={{ __html: paragraphText }} />}
       {!!handleButtonClick && (
-        <Button onClick={handleButtonClick} variant={buttonVariant}>
+        <Button onClick={handleButtonClick} variant={buttonVariant} size={buttonSize}>
           {buttonText}
         </Button>
       )}

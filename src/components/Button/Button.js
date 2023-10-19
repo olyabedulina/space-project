@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import './styles.scss';
 
-const Button = ({ className = '', variant = 'primary', children, onClick, disabled }) => {
+const Button = ({ className = '', variant = 'primary', children, onClick, disabled, size = 'md' }) => {
   function handleClick(e) {
     onClick(e);
   }
@@ -11,6 +11,7 @@ const Button = ({ className = '', variant = 'primary', children, onClick, disabl
     <button
       className={classNames('btn', className, {
         [`btn--${variant}`]: variant,
+        [`btn--${size}`]: size,
       })}
       type="button"
       disabled={disabled}

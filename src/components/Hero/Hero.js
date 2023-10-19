@@ -13,6 +13,7 @@ const Hero = () => {
           headingText={'Discover the vast expanses of <em>space</em>'}
           handleButtonClick={() => null}
           buttonText={'Learn more'}
+          buttonSize={'lg'}
           paragraphText={'Where the possibilities are <em>endless</em>!'}
         />
         <div className="hero__decoration" aria-hidden="true">

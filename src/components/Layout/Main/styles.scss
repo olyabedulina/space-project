@@ -2,8 +2,18 @@
 @import '../../../assets/styles/backgrounds';
 
 .main {
-  padding: rem(58) 0;
+  padding: rem(58) 0 rem(60);
   background: linear-gradient(196deg, $universe-blue-dark 0%, $universe-blue 100%);
+
+  @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+    padding-top: rem(55);
+    padding-bottom: rem(53);
+  }
+
+  @media screen and (max-width: map-get($universe-breakpoints, 'md') - 0.02px) {
+    padding-top: rem(50);
+    padding-bottom: rem(50);
+  }
 
   &__content {
     position: relative;
@@ -38,6 +48,10 @@
   @media screen and (min-width: map-get($universe-breakpoints, 'lg')) {
     .card:first-of-type {
       grid-area: header;
+
+      .card__copy {
+        font-size: rem(26);
+      }
     }
 
     .card:not(:first-of-type):not(:last-of-type) {
@@ -52,6 +66,24 @@
 
     .card:last-of-type {
       grid-area: footer;
+
+      .card__copy {
+        font-size: rem(26);
+      }
+    }
+  }
+
+  @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+    .card:first-of-type {
+      .card__copy {
+        font-size: rem(16);
+      }
+    }
+
+    .card:last-of-type {
+      .card__copy {
+        font-size: rem(16);
+      }
     }
   }
 
@@ -70,5 +102,9 @@
 
   h2.heading {
     padding-bottom: rem(40);
+
+    @media screen and (max-width: map-get($universe-breakpoints, 'lg') - 0.02px) {
+      padding-bottom: rem(30);
+    }
   }
 }
