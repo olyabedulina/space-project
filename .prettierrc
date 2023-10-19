@@ -1,0 +1,21 @@
+{
+  "useTabs": false,
+  "printWidth": 110,
+  "tabWidth": 2,
+  "endOfLine": "auto",
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "jsxBracketSameLine": false,
+  "noSemi": true,
+  "rcVerbose": true,
+  "overrides": [
+    {
+      "files": "*.{css,scss,sass}",
+      "options": {
+        "tabWidth": 2
+      }
+    }
+  ],
+  "bracketSpacing": true,
+  "arrowParens": "always"
+}
