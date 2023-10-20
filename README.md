@@ -1,7 +1,13 @@
 # Hi, I'm Olya, author of this project.
 
-I have spent ~ten hours in a sum working under this project. Enjoy.
+I have spent ~twelve hours in a sum working under this project.
 node version: v18.12.1, npm version: 8.19.2.
+
+Project was uploaded to github: [https://github.com/olyabedulina/space-project](https://github.com/olyabedulina/space-project)
+
+Project was also hosted on the github: [https://olyabedulina.github.io](https://olyabedulina.github.io)
+
+Enjoy.
 
 # Getting Started with Create React App
 
